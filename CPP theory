@@ -25,3 +25,237 @@ C++: Unmatched for speed and memory control, great for complex algorithms! ⚡
 
 𝐏𝐲𝐭𝐡𝐨𝐧: Easy to learn, but slower execution and less suited for time/memory-constrained problems. 🐍
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. 𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞𝐬 𝐢𝐧 𝐂++
+
+Data types define the type of data that a variable can hold. In C++, there are various data types, which can be categorized into primitive and derived data types.
+
+𝐏𝐫𝐢𝐦𝐢𝐭𝐢𝐯𝐞 𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞𝐬:
+
+𝐢𝐧𝐭: Used to store integers (whole numbers).
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: int age = 25;
+
+𝐟𝐥𝐨𝐚𝐭: Used for single-precision floating-point numbers (decimal values).
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: float height = 5.9;
+
+𝐝𝐨𝐮𝐛𝐥𝐞: Used for double-precision floating-point numbers. Offers more precision than float.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: double weight = 72.356;
+
+𝐜𝐡𝐚𝐫: Used to store single characters.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: char grade = 'A';
+
+𝐛𝐨𝐨𝐥: Used to store Boolean values (true or false).
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: bool isActive = true;
+
+𝐃𝐞𝐫𝐢𝐯𝐞𝐝 𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞𝐬:
+
+𝐀𝐫𝐫𝐚𝐲: Collection of elements of the same type.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: int arr[5] = {1, 2, 3, 4, 5};
+
+𝐏𝐨𝐢𝐧𝐭𝐞𝐫: Stores memory address of another variable.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: int* ptr = &age;
+
+𝐒𝐭𝐫𝐢𝐧𝐠: Sequence of characters (not a built-in type but provided via libraries like <string>).
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: string name = "John";
+
+𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞: User-defined data type for grouping different types.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+struct Person {
+    string name;
+    int age;
+};
+
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞𝐬:
+
+𝐄𝐧𝐮𝐦𝐬: Used for defining named integer constants.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+
+enum Day { Sunday, Monday, Tuesday };
+
+Day today = Sunday;
+
+𝐔𝐧𝐢𝐨𝐧: Stores different data types in the same memory location but can only hold one value at a time.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+union Data {
+    int i;
+    float f;
+};
+
+2. 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬 𝐢𝐧 𝐂++
+
+A variable is a name given to a memory location used to store a value. Variables in C++ must be declared with a specific data type before they can be used.
+
+𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞 𝐃𝐞𝐜𝐥𝐚𝐫𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧:
+
+int num;           // Declaration
+num = 10;          // Initialization
+float pi = 3.14;   // Declaration + Initialization
+
+𝐓𝐲𝐩𝐞𝐬 𝐨𝐟 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬:
+
+Local Variables: Declared inside a function or block, accessible only within that scope.
+
+𝐆𝐥𝐨𝐛𝐚𝐥 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬: Declared outside all functions, accessible to all functions in the program.
+
+𝑺𝒕𝒂𝒕𝒊𝒄 𝑽𝒂𝒓𝒊𝒂𝒃𝒍𝒆𝒔: Retain their value between multiple function calls.
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+
+static int count = 0;
+
+Variable Naming Rules:
+
+Must begin with a letter or underscore.
+
+Can contain letters, digits, and underscores.
+
+No special characters or spaces allowed.
+
+3. 𝐀𝐒𝐂𝐈𝐈 𝐓𝐚𝐛𝐥𝐞 𝐢𝐧 𝐂++
+
+𝐀𝐒𝐂𝐈𝐈 (𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝 𝐂𝐨𝐝𝐞 𝐟𝐨𝐫 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐈𝐧𝐭𝐞𝐫𝐜𝐡𝐚𝐧𝐠𝐞) is a character encoding standard that represents characters as integers. Each character (letters, digits, symbols) has a corresponding ASCII value.
+
+𝐀𝐒𝐂𝐈𝐈 𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+
+The ASCII value of 'A' is 65.
+
+The ASCII value of 'a' is 97.
+
+The ASCII value of '0' is 48.
+
+How to Use ASCII in C++:
+
+Common ASCII Values: 
+
+Character	             ASCII Value
+  'A'	                    65
+  'a'	                    97
+  '0'                     48
+  ' '(space)	            32
+  '$'	                    36
+  '@'	                    64
+
+
+You can find the ASCII value of any character using type casting:
+
+char ch = 'A';
+
+cout << "The ASCII value of " << ch << " is: " << int(ch) << endl;
+
+Common ASCII Values:
+
+CharacterASCII Value'A'65'a'97'0'48' ' (space)32'$'36'@'644. 
+
+𝐂𝐨𝐦𝐦𝐞𝐧𝐭𝐬 𝐢𝐧 𝐂++:-
+
+Comments are non-executable lines in the code that help in explaining the purpose or functionality of the code. Comments can make your code more readable and maintainable.
+
+𝐒𝐢𝐧𝐠𝐥𝐞-𝐋𝐢𝐧𝐞 𝐂𝐨𝐦𝐦𝐞𝐧𝐭𝐬:
+
+Single-line comments start with // and end at the end of the line.
+
+// 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚 𝐬𝐢𝐧𝐠𝐥𝐞-𝐥𝐢𝐧𝐞 𝐜𝐨𝐦𝐦𝐞𝐧𝐭
+
+int x = 10; // This comment explains the variable declaration
+
+𝐌𝐮𝐥𝐭𝐢-𝐋𝐢𝐧𝐞 𝐂𝐨𝐦𝐦𝐞𝐧𝐭𝐬:
+
+Multi-line comments start with /* and end with */. They are used to comment out multiple lines at once.
+
+/* This is a 
+
+   multi-line comment
+
+   in C++ programming */
+
+int y = 20;
+
+Best Practices for Comments:
+
+Use comments to explain why, not what: Good code should be self-explanatory.
+
+𝐀𝐯𝐨𝐢𝐝 𝐨𝐯𝐞𝐫-𝐜𝐨𝐦𝐦𝐞𝐧𝐭𝐢𝐧𝐠: 
+
+Too many comments can make the code cluttered.
+
+Keep comments up to date: If the code changes, update the comments accordingly.
+
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐂𝐨𝐦𝐦𝐞𝐧𝐭𝐬:
+
+You can use comments to temporarily disable certain lines of code during debugging.
+
+In documentation tools (like Doxygen), comments can be used for generating documentation.
+
+5. 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐓𝐨𝐩𝐢𝐜𝐬
+
+𝐃𝐚𝐭𝐚 𝐓𝐲𝐩𝐞 𝐌𝐨𝐝𝐢𝐟𝐢𝐞𝐫𝐬:
+
+Modifiers are used with data types to change the size and range.
+
+𝐬𝐢𝐠𝐧𝐞𝐝: Can hold positive and negative values.
+
+𝐮𝐧𝐬𝐢𝐠𝐧𝐞𝐝: Can only hold non-negative values.
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: unsigned int age = 30;
+
+𝐬𝐡𝐨𝐫𝐭: Takes less memory.
+
+𝐥𝐨𝐧𝐠: Takes more memory.
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞: long int largeNumber = 1000000;
+
+𝐓𝐲𝐩𝐞 𝐂𝐚𝐬𝐭𝐢𝐧𝐠:
+
+Type casting is converting one data type to another.
+
+𝐈𝐦𝐩𝐥𝐢𝐜𝐢𝐭 𝐂𝐚𝐬𝐭𝐢𝐧𝐠: Done automatically by the compiler.
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+
+int a = 5;
+
+float b = a;  // Implicit casting
+
+𝐄𝐱𝐩𝐥𝐢𝐜𝐢𝐭 𝐂𝐚𝐬𝐭𝐢𝐧𝐠: Done manually by the programmer.
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+
+float x = 10.5;
+
+int y = (int)x;  // Explicit casting
+
+𝐒𝐮𝐦𝐦𝐚𝐫𝐲:
+
+Data Types define the kind of values that variables can hold.
+
+Variables store values and are essential for any computation.
+
+ASCII Table helps in converting characters to their numeric representation.
+
+Comments make code readable, maintainable, and easier to debug.
+
+By understanding these foundational concepts in C++, you can write clearer, more efficient, and more maintainable code as you progress in your learning journey.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
